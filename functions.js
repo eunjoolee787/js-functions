@@ -95,6 +95,7 @@ calculate ("subtract", 4, 1);
 calculate ("multiply", 3, 4);
 calculate ("divide", 4, 12);
 
+
 /**
  * Returns true if `a` is greater than `b`.
  * @param {number} a
@@ -202,22 +203,16 @@ function isOdd (n){
  * @param {number} total maximum possible score
  * @return {string} the score represented as a letter grade
  */
-function letterGrade (score, total){
-	//var C <=80;
-	//var D <=70;
-	if(score / total >=0.90){
+function letterGrade (score, total) {
+	if (score / total >= 0.90) {
 		return "A";
-	}
-	else if (score / total >=0.80){
+	} else if (score / total >= 0.80) {
 		return "B";
-	}
-	else if (score / total >=0.70){
+	} else if (score / total >= 0.70) {
 		return "C";
-	}
-	else if (score / total >=0.60){
+	} else if (score / total >= 0.60) {
 		return "D";
-	}
-	else if (score / total <0.60){
+	} else if (score / total < 0.60) {
 		return "F";
 	}
 }
@@ -228,10 +223,10 @@ function letterGrade (score, total){
  * set its reviews` field to 1.
  * @param {object} restaurant represents a restaurant
  */
-function incrementReviews (restaurant){
-	if(restaurant.reviews === undefined){
+function incrementReviews (restaurant) {
+	if (restaurant.reviews === undefined) {
 		restaurant.reviews = 1;
-	}else {
+	} else {
 		restaurant.reviews++;
 	}
 	return restaurant;
@@ -252,14 +247,12 @@ function combine (word1, word2){
  * @param {number} radius
  * @return {object} circle
  */
- function createCircle (radius){
+ function createCircle (radius) {
  	var circle = {
- 		circumference: 2 * Math.PI * radius,
- 		area: Math.PI * radius * radius
+ 		circumference: 2 * radius * Math.PI,
+ 		area: radius * radius * Math.PI
  	};
-
  	return circle;
- 
  }
 
 
